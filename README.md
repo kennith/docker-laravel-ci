@@ -10,10 +10,14 @@ docker login
 
 - Build image with `docker build`
 
-`docker build -t kennith/laravel-ci:$IMG_TAG .`
+## Releasing
 
-- Push image with `docker push`
+- DockerHub is now integrated with GitHub.
+- A tag with vMajor.Minor.Patch will build in DockerHub.
 
-`docker push kennith/laravel-ci:$IMG_TAG`
+## Workflow
 
-Reference: http://blog.shippable.com/build-a-docker-image-and-push-it-to-docker-hub
+1. Update Dockerfile
+2. Test and build image locally with `docker build .`
+3. Commit and push to GitHub.
+4. Tag a release with v#.#.#
